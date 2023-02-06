@@ -23,4 +23,4 @@ urlpatterns = [
     path('', RedirectView.as_view(pattern_name='planning_poker:index'), name='redirect_to_poker_index'),
     path('poker/', include('planning_poker.urls')),
 ]
- + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+ #+ static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
