@@ -28,9 +28,10 @@ load_dotenv(BASE_DIR / '.env')
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG', '0').lower() in ['true', 't', '1']
+DEBUG = True
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(' ')
+ALLOWED_HOSTS = []
+
 
 
 
@@ -98,7 +99,10 @@ WSGI_APPLICATION = "planning_poker_site.wsgi.application"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'), conn_max_age=600),
+    'default': dj_database_url.config(     
+        default='postgres://estimation_poker_user:N42k0vuvEHS9nFpnGPebZwpHKbM2w6bw@dpg-cfgg011gp3jjsecvd3pg-a.frankfurt-postgres.render.com/estimation_poker',
+        conn_max_age=600    
+    )
 }
 
 
