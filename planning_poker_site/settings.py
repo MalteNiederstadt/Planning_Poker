@@ -17,6 +17,8 @@ import dj_database_url
 import mimetypes
 
 mimetypes.add_type("text/css", ".css", True)
+mimetypes.add_type("text/html", ".css", True)
+mimetypes.add_type("text/html", ".js", True)
 mimetypes.add_type("text/html", ".html", True)
 mimetypes.add_type("text/javascript", ".js", True)
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -146,7 +148,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-STATIC_ROOT = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
+
 # STATIC_URL = '/static/'
 # STATICFILES_DIRS = (
 #     os.path.join(PROJECT_ROOT, 'static/admin'),
