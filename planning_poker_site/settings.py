@@ -15,7 +15,7 @@ import os
 from dotenv import load_dotenv
 import dj_database_url
 import mimetypes
-import whitenoise
+
 
 mimetypes.add_type("text/css", ".css", True)
 mimetypes.add_type("text/html", ".css", True)
