@@ -5,3 +5,4 @@ python-dotenv==0.21.0
 channels
 django==3.2.0
 planning-poker
+whitenoise
