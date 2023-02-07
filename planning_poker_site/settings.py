@@ -31,7 +31,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS')
-
+#ALLOWED_HOSTS = ["*"]
 
 
 
@@ -145,7 +145,7 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_ROOT  =   os.path.join(PROJECT_ROOT, 'static')
 STATICFILES_DIRS = (
     #os.path.join(BASE_DIR, 'static'),
-    os.path.join(BASE_DIR, 'static', 'planning_poker'), 
+    os.path.join(BASE_DIR, 'static', 'planning_poker_site'), 
     os.path.join(BASE_DIR, 'static', 'admin'), 
 )
 # STATIC_URL = '/static/'
